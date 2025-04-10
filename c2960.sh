@@ -16,7 +16,7 @@ i=0					    			 #var to csv
 			i=3
 		 else																												  #function to use witch 2960-24/48p
                         echo "Server send command to download firmware on $LINE Old switch"
-                        snmpset -c veralot -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanbasek9-mz.150-2.SE11.bin    #send packet to dowload tftp file
+                        snmpset -c private -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanbasek9-mz.150-2.SE11.bin    #send packet to dowload tftp file
                         i=1          #var to csv
 		 fi
 }
@@ -30,7 +30,7 @@ i=0					    			 #var to csv
                         i=3
 			else
                         echo "Server send command to download firmware on $LINE to Lan Lite" 										  
-                        snmpset -c veralot -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanlitek9-mz.152-2.E8.bin  	  #send packet to dowload tftp file
+                        snmpset -c private -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanlitek9-mz.152-2.E8.bin  	  #send packet to dowload tftp file
                 
 		        i=1
 			fi			 #var to csv
@@ -46,7 +46,7 @@ i=0					    			 #var to csv
                         i=3
                         else
                         echo "Server send command to download firmware on $LINE to Lan Base"
-                        snmpset -c veralot -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanbasek9-mz.152-2.E8.bin    #send packet to dowload tftp file
+                        snmpset -c private -v2c $LINE  .1.3.6.1.4.1.9.2.10.12.10.127.0.110 s c2960-lanbasek9-mz.152-2.E8.bin    #send packet to dowload tftp file
                         i=1          #var to csv
 			fi
                 fi
